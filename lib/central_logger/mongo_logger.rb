@@ -1,6 +1,7 @@
 require 'erb'
 require 'mongo'
 require 'central_logger/replica_set_helper'
+require 'active_support'
 
 module CentralLogger
   class MongoLogger < ActiveSupport::BufferedLogger
