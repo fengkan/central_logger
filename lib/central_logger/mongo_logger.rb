@@ -8,7 +8,7 @@ module CentralLogger
     include ReplicaSetHelper
 
     MB = 2 ** 20
-    PRODUCTION_COLLECTION_SIZE = 2560 * MB
+    PRODUCTION_COLLECTION_SIZE = 1280 * MB
     DEFAULT_COLLECTION_SIZE = 1280 * MB
     # Looks for configuration files in this order
     CONFIGURATION_FILES = ["central_logger.yml", "mongoid.yml", "database.yml"]
