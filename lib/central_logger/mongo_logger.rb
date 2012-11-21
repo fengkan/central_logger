@@ -44,11 +44,11 @@ module CentralLogger
     end
 
     def add(severity, message = nil, progname = nil, &block)
-      if @level <= severity && message.present? && @mongo_record.present?
+      #if @level <= severity && message.present? && @mongo_record.present?
         # do not modify the original message used by the buffered logger
-        msg = logging_colorized? ? message.to_s.gsub(/(\e(\[([\d;]*[mz]?))?)?/, '').strip : message
-        @mongo_record[:messages][LOG_LEVEL_SYM[severity]] << msg
-      end
+      #  msg = logging_colorized? ? message.to_s.gsub(/(\e(\[([\d;]*[mz]?))?)?/, '').strip : message
+      #  @mongo_record[:messages][LOG_LEVEL_SYM[severity]] << msg
+      #end
       # may modify the original message
       disable_file_logging? ? message : super
     end
